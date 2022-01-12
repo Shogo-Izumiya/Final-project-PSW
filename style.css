@@ -1,0 +1,22 @@
+div.top{
+  border-top: solid;
+  border-bottom: solid;
+  vertical-align: middle;
+  /* display: inline; */
+}
+div.top h3 {
+  display: inline;
+}
+div.top a {
+  text-align: right;
+}
+div.top-left, div.top-right {
+  display: inline-block;
+}
+div.top-right {
+  width: 45%;
+  text-align: right;
+}
+div.top-left {
+  width: 55%;
+}
