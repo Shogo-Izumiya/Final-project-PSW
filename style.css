@@ -20,9 +20,10 @@ div.top-right {
 div.top-left {
   width: 55%;
 }
-{
+.photograph {
   text-align: right;
 }
-.words01{
-  font-family: "ヒラギノ丸ゴ ProN","Helvetica";
+
+h3, h4 {
+  font-family: "ヒラギノ丸ゴ ProN", "Helvetica"
 }
