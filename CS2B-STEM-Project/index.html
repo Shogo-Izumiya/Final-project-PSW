@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Calculator</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="./nerdamer.core.js"></script>
+  <!--   <style>
+    /* source: https://codepen.io/philippkuehn/pen/QbrOaN */
+    body {
+      font-family: sans-serif;
+      font-size: 15px;
+    }
+
+    .tree ul {
+      position: relative;
+      padding: 1em 0;
+      white-space: nowrap;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .tree ul::after {
+      content: '';
+      display: table;
+      clear: both;
+    }
+
+    .tree li {
+      display: inline-block;
+      vertical-align: top;
+      text-align: center;
+      list-style-type: none;
+      position: relative;
+      padding: 1em .5em 0 .5em;
+    }
+
+    .tree li::before,
+    .tree li::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 50%;
+      border-top: 1px solid #ABABAB;
+      width: 50%;
+      height: 1em;
+    }
+
+    .tree li::after {
+      right: auto;
+      left: 50%;
+      border-left: 1px solid #ABABAB;
+    }
+
+    .tree li:only-child::after,
+    .tree li:only-child::before {
+      display: none;
+    }
+
+    .tree li:only-child {
+      padding-top: 0;
+    }
+
+    .tree li:first-child::before,
+    .tree li:last-child::after {
+      border: 0 none;
+    }
+
+    .tree li:last-child::before {
+      border-right: 1px solid #ABABAB;
+      border-radius: 0 5px 0 0;
+    }
+
+    .tree li:first-child::after {
+      border-radius: 5px 0 0 0;
+    }
+
+    .tree ul ul::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      border-left: 1px solid #ABABAB;
+      width: 0;
+      height: 1em;
+    }
+
+    .tree li div {
+      border: 1px solid #ABABAB;
+      padding: .5em .75em;
+      text-decoration: none;
+      display: inline-block;
+      border-radius: 5px;
+      color: #333;
+      position: relative;
+      top: 1px;
+    }
+
+    .tree li div:hover,
+    .tree li div:hover+ul li div {
+      background: #90C4F4;
+      color: #fff;
+      border: 1px solid #ABABAB;
+    }
+
+    .tree li div:hover+ul li::after,
+    .tree li div:hover+ul li::before,
+    .tree li div:hover+ul::before,
+    .tree li div:hover+ul ul::before {
+      border-color: #90C4F4;
+    }
+
+    .tree div span {
+      display: inline-block;
+      min-width: 30px;
+    }
+
+    .operator {
+      background: #ECF7FC;
+    }
+
+    .function {
+      background: #05346A;
+      color: #FFF !important;
+    }
+
+    #input {
+      border: 2px solid #ABABAB;
+      border-radius: 3px;
+      padding: 5px;
+      color: #707070;
+      font-size: 18px;
+      width: 80%;
+      margin-bottom: 4px;
+    }
+
+    #generate {
+      padding: 0;
+      border: none;
+      font: inherit;
+      color: inherit;
+      cursor: pointer;
+      background: #CCC;
+      padding: 7px;
+      vertical-align: top;
+      font-size: 18px;
+      color: #707070;
+      border-radius: 3px;
+      margin-left: 2px;
+    }
+  </style> -->
+</head>
+
+<body>
+  <div class="center container">
+    <h1>[MATRIX] Simple Calculator</h1>
+    <p>
+      Hello! This is very useful matrix calculator. I'm working for other calculation methods.
+      <br>
+      How to use this website:
+      <br>
+      1. Put numbers to blanks.
+      <br>
+      2. Click GO.
+      <br>
+      3.You can get answer!
+    </p>
+    <div>
+      <h1>Matrix 2x2:</h1>
+      <img src="Matrix 2x2.jpeg" width="400px" height="160px" align="right">
+      <input type="text" id="input1_1" size="10" class="narrow-font">
+      <input type="text" id="input1_2" size="10" class="narrow-font">
+      <br></br>
+      <input type="text" id="input1_3" size="10" class="narrow-font">
+      <input type="text" id="input1_4" size="10" class="narrow-font">
+      <br></br>
+      <input type="button" id="buttonGo1" value="GO">
+    </div>
+
+        <p>
+    
+          2x2 RESULT: <span id="output1" class="answer"></span>
+        </p>
+    
+    <div>
+      <br></br>
+      <h1>Matrix 3x3:</h1>
+      <img src="Matrix 3x3.png" width="400px" height="120px" align="right">
+      <input type="text" id="input2_1" size="10" class="narrow-font">
+      <input type="text" id="input2_2" size="10" class="narrow-font">
+      <input type="text" id="input2_3" size="10" class="narrow-font">
+      <br></br>
+      <input type="text" id="input2_4" size="10" class="narrow-font">
+      <input type="text" id="input2_5" size="10" class="narrow-font">
+      <input type="text" id="input2_6" size="10" class="narrow-font">
+      <br></br>
+      <input type="text" id="input2_7" size="10" class="narrow-font">
+      <input type="text" id="input2_8" size="10" class="narrow-font">
+      <input type="text" id="input2_9" size="10" class="narrow-font">
+      <br></br>
+      <input type="button" id="buttonGo2" value="GO">
+    </div>
+<!--     <div class="row">
+      <div class="column" style="background-color:#fff;">
+        <form name="form1" id="form1" action="/action_page.php">
+          Subjects: <select name="subject" id="subject">
+            <option value="" selected="selected">Select subject</option>
+          </select>
+          <br><br>
+          Equations: <select name="topic" id="topic">
+            <option value="" selected="selected">Please select subject first</option>
+          </select>
+          <br><br>
+          Chapters: <select name="chapter" id="chapter">
+            <option value="" selected="selected">Please select topic first</option>
+          </select>
+          <br><br>
+          <input type="button" id="buttonFind" value="Find">
+        </form>
+      </div>
+
+      <div class="column" style="background-color:#bbb;">
+        <p>
+          NUMBERS:
+          <input type="text" id="input1">
+          <input type="button" id="buttonGo" value="GO">
+<!--         </p> -->
+
+    <p>
+          3x3 RESULT: <span id="output2" class="answer"></span>
+        </p>
+<!--       </div>
+<!--     </div> -->
+  </div>
+
+  <script src="AA.js"></script>
+
+  <script>
+    var output = document.getElementById('output');
+    var input = document.getElementById('input');
+    function keypress(e) {
+      var code = Number(e.keyCode ? e.keyCode : e.which);
+      if (code === 13) { //Enter keycode
+        generate();
+      }
+    }
+    function generate() {
+      try {
+        output.innerHTML = nerdamer.htmlTree(input.value);
+      } catch (e) {
+        alert(e.message);
+      }
+    }
+  </script>
+</body>
+
+</html>
